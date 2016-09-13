@@ -41,6 +41,7 @@ nav {
   text-align: center
 }
 
+/* para l boton al estrechar la pantalla */
 @media screen and (max-width: 700px) {
     .btnmenu {
         position: absolute;
@@ -55,4 +56,26 @@ nav {
         display: none;
     }
     #menu, #subtitle {display: block !important;}
+}
+
+
+.container {  /* para el ancho */
+  margin: 0 5px;
+}
+@media screen and (min-width:701px) {
+  .container {
+    width: 690px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width:1001px) {
+  .container {
+    width: 990px;
+  }
+}
+
+@media screen and (min-width:1201px) {
+  .container {
+    width: 1190px;
+  }
 }

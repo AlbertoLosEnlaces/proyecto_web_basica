@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mi web de cervezas</title>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
 
@@ -10,12 +10,14 @@
 </head>
 
 <body>
+  <div class="container">
   <header>
     <img src="img/logo.png" alt="" class="logo">
     <h1 class="title">Mis cervezas</h1>
     <p class="subtitle">Aficiones y locuras de un amante de la cerveza</p>
     <nav>
-      <ul class="menu">
+      <button onclick="toggle_visibility('menu');" class="btnmenu">Menu</button>
+      <ul id="menu" class="menu">
         <li class="menuitem">
           <a href="index.html" class="menulink">Inicio</a>
         </li>
@@ -27,7 +29,20 @@
         </li>
       </ul>
     </nav>
+
+<script type="text/javascript">
+  function toggle_visibility(id) {
+     var e = document.getElementById(id);
+     if(e.style.display == 'block')
+        e.style.display = 'none';
+     else
+        e.style.display = 'block';
+  }
+</script>
+
+
   </header>
+  <div class="container">
   <aside>
     <div>
       <h1 class="bannerTitle">Anuncio 1</h1>
@@ -74,6 +89,8 @@
   <footer>
     <p class="copyright">Sitio web realizado por un amante de la cerveza</p>
   </footer>
+</div>
+
 </body>
 
 </html>
